@@ -46,3 +46,8 @@ let description =
   language;
 
 console.log(description);
+
+//Strings and Template Literals
+let descriptionNew = `${state} is in the ${country} and its ${population} million people speak ${language}`
+
+console.log(descriptionNew)
