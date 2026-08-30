@@ -48,25 +48,35 @@ let description =
 console.log(description);
 
 //Strings and Template Literals
-let descriptionNew = `${state} is in the ${country} and its ${population} million people speak ${language}`
+let descriptionNew = `${state} is in the ${country} and its ${population} million people speak ${language}`;
 
-console.log(descriptionNew)
+console.log(descriptionNew);
 
 //Type Conversion and Coercion
-console.log('9' - '5'); // -> 4
-console.log('19' - '13' + '17'); // -> 617
-console.log('19' - '13' + 17); // -> 23
-console.log('123' < 57); // -> False
-console.log(5 + 6 + '4' + 9 - 4 - 2); // -> 1143
+console.log("9" - "5"); // -> 4
+console.log("19" - "13" + "17"); // -> 617
+console.log("19" - "13" + 17); // -> 23
+console.log("123" < 57); // -> False
+console.log(5 + 6 + "4" + 9 - 4 - 2); // -> 1143
 
 //Equality Operators == & === and Prompt function
 
-let numNeighbors = Number(prompt('How many neighbor countries does your country have?'))
+let numNeighbors = Number(
+  prompt("How many neighbor countries does your country have?"),
+);
 
-if(numNeighbors === 1){
-  console.log('Only 1 border!')
-}else if(numNeighbors > 1){
-  console.log('More than 1 border!')
-}else{
-  console.log('No border')
+if (numNeighbors === 1) {
+  console.log("Only 1 border!");
+} else if (numNeighbors > 1) {
+  console.log("More than 1 border!");
+} else {
+  console.log("No border");
+}
+
+//Logical Operators
+
+if (language === "English" && population < 50000000 && !isIsland) {
+  console.log("You should live in Portugal, Sarah!");
+} else {
+  console.log(`${country} does not meet your criteria, Sarah!`);
 }
