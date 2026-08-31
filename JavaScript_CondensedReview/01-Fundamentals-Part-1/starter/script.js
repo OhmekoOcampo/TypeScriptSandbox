@@ -80,3 +80,20 @@ if (language === "English" && population < 50000000 && !isIsland) {
 } else {
   console.log(`${country} does not meet your criteria, Sarah!`);
 }
+
+let day = "saturda"
+
+if (day === "monday"){
+  console.log("Plan course structure")
+  console.log("Go to coding meetup")
+}else if(day === "tuesday"){
+  console.log("Prepare Theory Videos")
+}else if(day === "wednesday" || day === "thursday"){
+  console.log("Write code examples!")
+}else if (day === "friday"){
+  console.log("Record Videos")
+}else if(day === "saturday" || day === "sunday"){
+  console.log("Enjoy the Weekend!")
+}else{
+  console.log("Not a valid day!")
+}
