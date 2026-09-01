@@ -81,6 +81,7 @@ if (language === "English" && population < 50000000 && !isIsland) {
   console.log(`${country} does not meet your criteria, Sarah!`);
 }
 
+//The Switch Statement 
 let day = "saturda"
 
 if (day === "monday"){
@@ -97,3 +98,4 @@ if (day === "monday"){
 }else{
   console.log("Not a valid day!")
 }
+
