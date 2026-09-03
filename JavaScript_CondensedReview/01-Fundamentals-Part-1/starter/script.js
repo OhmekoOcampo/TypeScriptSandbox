@@ -81,7 +81,7 @@ if (language === "English" && population < 50000000 && !isIsland) {
   console.log(`${country} does not meet your criteria, Sarah!`);
 }
 
-//The Switch Statement 
+//The Switch Statement (within lecture 26. The Switch Statement)
 let day = "saturda"
 
 if (day === "monday"){
@@ -97,5 +97,28 @@ if (day === "monday"){
   console.log("Enjoy the Weekend!")
 }else{
   console.log("Not a valid day!")
+}
+
+//The Switch Statement Challenge
+let language2 = 'tagalog';
+
+switch(language2){
+  case 'chinese':
+  case 'mandarin':
+    console.log('MOST number of native speakers!');
+    break;
+  case 'spanish':
+    console.log('2nd place in number of native speakers');
+    break;
+  case 'english':
+    console.log('3rd place');
+    break;
+  case 'hindi':
+    console.log('Number 4');
+    break;
+  case 'arabic':
+    console.log('5th most spoken language');
+  default:
+    console.log('Great language too :D')
 }
 
