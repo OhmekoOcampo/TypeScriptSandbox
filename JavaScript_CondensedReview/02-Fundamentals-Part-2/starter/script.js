@@ -33,3 +33,24 @@ let percentageJPN2 = percentageOfWorld2('Japan',2*122300000)
 let percentagePI2 = percentageOfWorld2('Philippines',117800000)
 
 console.log(percentageUS2,percentageJPN2,percentagePI2)
+
+//Assignments - Arrow Functions
+let percentageOfWorld3 = (countryName, population) => `The ${countryName} is about ${(population/worldPop)*100} of the world population`
+
+let percentageUS3 = percentageOfWorld3('United States',342600000)
+let percentageJPN3 = percentageOfWorld3('Japan',122300000)
+let percentagePI3 = percentageOfWorld3('Philippines',117800000)
+
+console.log(percentageUS3,percentageJPN3,percentagePI3)
+
+//Assignments - Functions calling other functions
+//Here we call a function within a function. So I'm going to take the percentageOfWorld1 function and create one that just returns percentage.
+
+let percentageOfWorld4 = (population) => (population/worldPop)*100;
+
+let describePopulation = (country,population) => `${country} has ${population} million people,
+which is about ${percentageOfWorld4(population)}% of the world`;
+
+console.log(describePopulation("United States",342600000))
+console.log(describePopulation("Japan",122300000))
+console.log(describePopulation("Philippines",117800000))
