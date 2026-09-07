@@ -83,3 +83,32 @@ if (!neighbors.includes('germany')){
 
 neighbors[neighbors.indexOf('italy')] = 'DAS BOOT'
 console.log(neighbors)
+
+//Assignments - Introduction to Objects
+let myCountry = {
+    country: 'United States',
+    capital: 'Washington D.C.',
+    langauge: 'English',
+    population: 342600000,
+    neighbors: ['Canada', 'Mexico'],
+};
+console.log(myCountry);
+
+//Challenge - Video 44: Dot vs. Bracket Notation
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037-1991,
+    job: 'teacher',
+    friends: ['Michael','Peter','Steven']
+};
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} and his best friend is called ${jonas.friends[0]}`)
+
+//Assignments - Dot vs. Bracket Notation
+console.log(`${myCountry.country} has ${myCountry.population} ${myCountry.language}-speaking people, ${myCountry.neighbors.length} neighboring countries and a captital called ${myCountry.capital}.`)
+
+myCountry.population = myCountry.population + 2000000;
+console.log(myCountry.population);
+myCountry['population'] = myCountry['population'] - 2000000;
+console.log(myCountry['population']);
