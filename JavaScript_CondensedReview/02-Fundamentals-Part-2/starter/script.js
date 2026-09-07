@@ -54,3 +54,32 @@ which is about ${percentageOfWorld4(population)}% of the world`;
 console.log(describePopulation("United States",342600000))
 console.log(describePopulation("Japan",122300000))
 console.log(describePopulation("Philippines",117800000))
+
+
+//Assignments - Introduction to Arrays
+//finland population is 5.65 million
+populations = [342600000,122300000,117800000,5650000]
+
+if (populations.length == 4){
+    console.log("Array has 4 elements!")
+}else{
+    console.log("Array doesn't have 4 elements!")
+}
+
+percentages = [percentageOfWorld4(populations[0]),percentageOfWorld4(populations[1]),percentageOfWorld4(populations[2]),percentageOfWorld4(populations[3])];
+console.log(percentages);
+
+//Assignments - Basic Array Operations (Methods)
+//Neighboring Countries of Austria:
+neighbors = ['france','germany','poland','romania','italy'];
+neighbors.push('utopia');
+neighbors.pop()
+
+if (!neighbors.includes('germany')){
+    console.log('Probably not a central european country :D')
+}else{
+    console.log('Germany is a neighbor! :D')
+}
+
+neighbors[neighbors.indexOf('italy')] = 'DAS BOOT'
+console.log(neighbors)
