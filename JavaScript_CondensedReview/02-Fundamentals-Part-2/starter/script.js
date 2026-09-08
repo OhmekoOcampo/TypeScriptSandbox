@@ -136,3 +136,8 @@ jonas.summary() //Edited the jonas object in Challenge - Video 44 section.
 
 //Assignments - Object Methods
 myCountry.describe();
+
+//Assignments: The For Loop
+for(let vote = 1; vote <= 50; vote++){
+    console.log(`Voter number ${vote} is currently voting`)
+}
