@@ -88,9 +88,16 @@ console.log(neighbors)
 let myCountry = {
     country: 'United States',
     capital: 'Washington D.C.',
-    langauge: 'English',
+    language: 'English',
     population: 342600000,
-    neighbors: ['Canada', 'Mexico'],
+    neighbors: ['Canada','Mexico'],
+    describe: function(){
+        console.log(`My country's name is ${myCountry.country} and its capital is ${myCountry.capital}. The inhabitants speak ${myCountry.language} and its population is ${myCountry.population} million people. My country is ${this.checkIsland() ? 'a' : 'not an'} island.`)
+    },
+    checkIsland: function(){
+        console.log(this.neighbors.length)
+        return this.neighbors.length === 0;
+    }
 };
 console.log(myCountry);
 
@@ -98,9 +105,20 @@ console.log(myCountry);
 const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
-    age: 2037-1991,
+    birthYeah: 1991,
     job: 'teacher',
-    friends: ['Michael','Peter','Steven']
+    friends: ['Michael','Peter','Steven'],
+    hasDriversLicense: false,
+    calcAge: function(){
+        return 2037 - this.birthYeah;
+    },
+    summary: function() {
+        if (this.hasDriversLicense){
+            console.log(`${this.firstName} is a ${this.calcAge()}-year old ${this.job} and he has a driver's license`)
+        }else{
+            console.log(`${this.firstName} is a ${this.calcAge()}-year old ${this.job} and he does not have a driver's license`)
+        }
+    }
 };
 
 console.log(`${jonas.firstName} has ${jonas.friends.length} and his best friend is called ${jonas.friends[0]}`)
@@ -112,3 +130,9 @@ myCountry.population = myCountry.population + 2000000;
 console.log(myCountry.population);
 myCountry['population'] = myCountry['population'] - 2000000;
 console.log(myCountry['population']);
+
+//Challenge - Video 45: Object Methods
+jonas.summary() //Edited the jonas object in Challenge - Video 44 section.
+
+//Assignments - Object Methods
+myCountry.describe();
