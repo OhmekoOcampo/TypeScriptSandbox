@@ -138,6 +138,47 @@ jonas.summary() //Edited the jonas object in Challenge - Video 44 section.
 myCountry.describe();
 
 //Assignments: The For Loop
-for(let vote = 1; vote <= 50; vote++){
+/*for(let vote = 1; vote <= 50; vote++){
     console.log(`Voter number ${vote} is currently voting`)
+}*/
+
+//Assignments: Looping Arrays, Breaking and Continuing
+percentages2 = [];
+
+for(let i = 0; i < populations.length; i++){
+    percentages2.push(percentageOfWorld4(populations[i]))
 }
+console.log(percentages2)
+
+
+//Assignments: Looping Backwards and Loops in Loops
+let listOfNeighbors = [['Canada','Mexico'],['Spain'],['Norway','Sweden','Russia']];
+
+for(let i=0; i <= 2; i++){
+    for(let j=0;j < listOfNeighbors[i].length;j++)
+        console.log(`Neighbor: ${listOfNeighbors[i][j]}`);
+}
+
+//Yes!! I got it! Remember to think of abstractions first. 
+//How can you represent what you are trying to iterate through symbolically or logically?
+
+//Assignments: The While Loop
+let i = 0;
+let j = 0;
+while(i < 3){
+    while(j < listOfNeighbors[i].length){
+        console.log(`Neighbor: ${listOfNeighbors[i][j]}`);
+        j++;
+    }
+    j=0;
+    i++;
+}
+
+let percentage3 = [];
+let k = 0;
+while(k < populations.length){
+    percentage3.push(percentageOfWorld4(populations[k]))
+    k++
+}
+
+console.log(percentage3);
