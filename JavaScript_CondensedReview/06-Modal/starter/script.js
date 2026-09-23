@@ -29,5 +29,10 @@ btnCloseModal.addEventListener('click', function () {
 })*/
 
 btnCloseModal.addEventListener('click', closeModal);
-
 overlay.addEventListener('click', closeModal);
+
+/* Listening for Key Press Events */
+document.addEventListener('keydown', function (e) {
+    console.log('A key was pressed');
+    console.log(e);
+})
