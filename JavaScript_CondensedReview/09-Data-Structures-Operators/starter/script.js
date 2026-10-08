@@ -34,6 +34,17 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
+    );
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -50,7 +61,7 @@ const restaurant = {
   },
 };
 
-//Small Array Destructing Example
+/* Array Destructing */
 //Without the technique of destructuring we do this to access all the elements of an array and assign them to variables.
 const arr = [2, 3, 4];
 const a = arr[0];
@@ -90,3 +101,52 @@ console.log(element4, element5, element6);
 //If we don't know the size of the array, we can do default values when destructuring.
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
+
+/* Object Destructuring */
+/*
+* Typically this is used for object taken using API calls. 
+
+*/
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+//If we wanted the variables names to be different from property names?
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
+
+//Default Values
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+//Mutating Variables
+
+let e = 111;
+let f = 999;
+const obj = { e: 23, f: 7, g: 14 };
+
+({ e, f } = obj); //Take the e and f from the object called obj and assign them to the variables e and f.
+console.log(e, f);
+
+//Nested Objects
+const {
+  fri: { open, close },
+} = openingHours;
+console.log(open, close);
+
+//Neat trick with Destructuring Objects
+
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Via del Sole, 21',
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+restaurant.orderDelivery({
+  address: 'Via del Sole, 21',
+  starterIndex: 2,
+});
